@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+body{
+    background-color: hsl(222, 26%, 31%);font-family: league spartan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator{
+    margin-top: 50px;
+}
+.top{
+    display: flex;
+    margin-top: 30px;
+    color: white;
+}
+.right{
+    display: flex;
+    justify-content: space-between;
+}
+.one{
+    margin-left: -55px;
+    margin-right: 0px;
+}
+.two{
+    margin-left: 10px
+}
+.three{
+    margin-left: 10px;
+}
+#box{
+    width: 60px;
+    height: 20px;
+    margin-left:-55px;
+    margin-top: 37px;
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 30px;
+    position: relative;
+}
+#circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 30px;
+    background-color: hsl(6, 63%, 50%);
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    z-index: 1;
+}
+.calc{
+    font-size: 32px;
+}
+.right{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+.theme{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 50;
+    margin-right: 70px;
+    margin-left: 150px;
+    margin-top: 42px;
+}
+.total{
+    margin-top: -20px;
+    height: 80px;
+    background-color: hsl(224, 36%, 15%);
+    border-radius: 5px;
+    width:325px;
+    color: white;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottom{
+    background-color: hsl(223, 31%, 20%);
+    display: grid;
+    grid-template-columns: 60px 60px 60px 60px;
+    grid-template-rows: 40px 40px 40px 40px;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 5px;
+    padding-bottom:30px;
+    position: absolute;
+}
+button{
+    border-radius: 5px;
+    border: 0;
+    position: relative;
+    font-family: league spartan;
+    color:hsl(225, 20%, 31%);
+    font-size: 25px;
+    cursor: pointer;
+}
+.reset{
+    height: 40px;
+    width: 135px;
+    background-color:hsl(225, 21%, 49%);
+    color: WHITE;
+    font-size: 16px;
+}
+.reset:hover, .del:hover,.equal:hover{
+    opacity: 0.5;
+}
+.equal{
+    height: 40px;
+    width: 135px;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    margin-left: 75px;
+    background-color: hsl(6, 63%, 50%);
+    color: WHITE;
+    font-size: 16px;
+}
+.del{
+    color: white;
+    background-color:hsl(225, 21%, 49%);
+    text-transform: uppercase;
+    font-size: 16px;
+}
+body.active1{
+    background-color: hsl(0, 0%, 90%);
+}
+body.active1 button{
+    color: rgb(48, 46, 46);}
+.total.active1{
+    background-color: hsl(0, 0%, 93%);
+    color: rgb(48, 46, 46);;
+}
+.bottom.active1{
+    background-color: hsl(0, 5%, 81%);
+    color: black;
+}
+.equal.active1{
+    background-color: hsl(25, 98%, 40%);
+    color: white;
+}
+.reset.active1{
+    background-color: hsl(185, 42%, 37%);
+    color:white
+}
+.del.active1{
+    background-color: hsl(185, 42%, 37%);
+    color: white;
+}
+.top.active1{
+    color: rgb(48, 46, 46);;
+}
+button.active1{
+    color: black;
+}
+body.active2{
+    background-color: hsl(268, 75%, 9%);
+}
+body.active2 button{
+color:hsl(52, 100%, 62%);
+background-color: hsl(268, 47%, 21%);
+}
+.top.active2{
+    color:hsl(52, 100%, 62%);
+}
+.total.active2{
+    background-color: hsl(268, 71%, 12%);
+    color:hsl(52, 100%, 62%);
+}
+.bottom.active2{
+    background-color: hsl(268, 71%, 12%);
+}
+.del.active2{
+    background-color: hsl(281, 89%, 26%);
+    color: white;
+}
+.reset.active2{
+    background-color: hsl(281, 89%, 26%);
+    color: white;
+}
+.equal.active2{
+    background-color: hsl(176, 100%, 44%);
+    color: black;
+}
+@media screen and (max-width: 600px) {
+    .top{
+        margin-top: -40px;
+    }
+    .calc{
+        margin-left: 0px;
+    }
+    .theme{
+        margin-left: 280px;
+    }
+    .total{
+        width: 440px;  
+        margin-top: 10px; 
+    }
+    .bottom{ 
+        width:400px;
+        height: 330px;
+        grid-template-columns: 85px 85px 85px 85px;
+        grid-template-rows: 50px 50px 50px 50px;
+        gap: 20px;
+        padding: 20px;
+    }
+    button{
+        height: 50px;
+}
+.equal{
+    width: 192px;
+    margin-left: 105px;
+}
+.reset{
+    width: 200px;
+}
+}
