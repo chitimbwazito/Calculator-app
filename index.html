@@ -2,49 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
   <title>Calculator app</title>
 </head>
 <body class="body">
   <div class="calculator">
-  <div id="top" class="top">
-    <p id="calc" class="calc">calc </p>
-    <p class="theme">theme</p>
-    <div class="right">
-    <p id="one" class="one">1</p>
-    <p id="two" class="two">2</p>
-    <p id="three" class="three">3</p>
-    <div class="toggle">
-    <p id="box" class="box">
-    <span id="circle"></span>
+    <div id="top" class="top">
+      <p id="calc" class="calc">calc</p>
+      <div class="theme-container">
+        <p class="theme">theme</p>
+        <div class="right">
+          <p id="one" class="one">1</p>
+          <p id="two" class="two">2</p>
+          <p id="three" class="three">3</p>
+          <div class="toggle">
+            <p id="box" class="box">
+              <span id="circle"></span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    </p>
-  </div>
-  </div>
-  <p id="total" class="total"></p>
-  <div id="bottom" class="bottom">
-  <button onclick="total.textContent += '7'">7</button>
-  <button onclick="total.textContent += '8'">8</button>
-  <button id="button9" onclick="total.textContent += '9'">9</button>
-  <button class="del" id="del">del</button>
-  <button id="button4" onclick="total.textContent += '4'">4</button>
-  <button onclick="total.textContent += '5'">5</button>
-  <button onclick="total.textContent += '6'">6</button>
-  <button onclick="total.textContent += '+'" id="plus">+</button>
-  <button onclick="total.textContent += '1'">1</button>
-  <button onclick="total.textContent += '2'">2</button>
-  <button onclick="total.textContent += '3'" value="3">3</button>
-  <button onclick="total.textContent += '-'" id="minus">-</button>
-  <button onclick="total.textContent += '.'" id="point">.</button>
-  <button onclick="total.textContent += '0'">0</button>
-  <button onclick="total.textContent += '/'">/</button>
-  <button onclick="total.textContent += '*'">*</button>
-  <button id="reset" class="reset" type="reset" onclick="total.textContent = ''">RESET</button>
-  <button onclick="total.textContent = eval(total.textContent)" id="equal" class="equal">=</button>
-</div>
-</div>
+    <p id="total" class="total"></p>
+    <div id="bottom" class="bottom">
+      <button onclick="total.textContent += '7'">7</button>
+      <button onclick="total.textContent += '8'">8</button>
+      <button id="button9" onclick="total.textContent += '9'">9</button>
+      <button class="del" id="del">del</button>
+      <button id="button4" onclick="total.textContent += '4'">4</button>
+      <button onclick="total.textContent += '5'">5</button>
+      <button onclick="total.textContent += '6'">6</button>
+      <button onclick="total.textContent += '+'" id="plus">+</button>
+      <button onclick="total.textContent += '1'">1</button>
+      <button onclick="total.textContent += '2'">2</button>
+      <button onclick="total.textContent += '3'" value="3">3</button>
+      <button onclick="total.textContent += '-'" id="minus">-</button>
+      <button onclick="total.textContent += '.'" id="point">.</button>
+      <button onclick="total.textContent += '0'">0</button>
+      <button onclick="total.textContent += '/'">/</button>
+      <button onclick="total.textContent += '*'">*</button>
+      <button id="reset" class="reset" type="reset" onclick="total.textContent = ''">RESET</button>
+      <button onclick="total.textContent = eval(total.textContent)" id="equal" class="equal">=</button>
+    </div>
   </div>
   <script src="app.js"></script>
 </body>
