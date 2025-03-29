@@ -1,216 +1,253 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
-body{
-    background-color: hsl(222, 26%, 31%);font-family: league spartan;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.calculator{
-    margin-top: 50px;
+
+body {
+  background-color: hsl(222, 26%, 31%);
+  font-family: 'League Spartan', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
-.top{
-    display: flex;
-    margin-top: 30px;
-    color: white;
+
+.calculator {
+  width: 100%;
+  max-width: 325px;
 }
-.right{
-    display: flex;
-    justify-content: space-between;
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: white;
 }
-.one{
-    margin-left: -55px;
-    margin-right: 0px;
+
+.theme-container {
+  display: flex;
+  align-items: center;
 }
-.two{
-    margin-left: 10px
+
+.right {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
 }
-.three{
-    margin-left: 10px;
+
+.calc {
+  font-size: 32px;
 }
-#box{
-    width: 60px;
-    height: 20px;
-    margin-left:-55px;
-    margin-top: 37px;
-    background-color: hsl(223, 31%, 20%);
-    border-radius: 30px;
-    position: relative;
+
+.theme {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 50;
 }
-#circle{
-    width: 15px;
-    height: 15px;
-    border-radius: 30px;
-    background-color: hsl(6, 63%, 50%);
-    position: absolute;
-    top: 2px;
-    left: 3px;
-    z-index: 1;
+
+.one, .two, .three {
+  margin: 0 5px;
+  font-size: 12px;
 }
-.calc{
-    font-size: 32px;
+
+#box {
+  width: 60px;
+  height: 20px;
+  margin-left: 5px;
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 30px;
+  position: relative;
 }
-.right{
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
+
+#circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 30px;
+  background-color: hsl(6, 63%, 50%);
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  z-index: 1;
 }
-.theme{
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 50;
-    margin-right: 70px;
-    margin-left: 150px;
-    margin-top: 42px;
+
+.total {
+  height: 80px;
+  background-color: hsl(224, 36%, 15%);
+  border-radius: 5px;
+  width: 100%;
+  color: white;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.total{
-    margin-top: -20px;
-    height: 80px;
-    background-color: hsl(224, 36%, 15%);
-    border-radius: 5px;
-    width:325px;
-    color: white;
-    font-size: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.bottom {
+  background-color: hsl(223, 31%, 20%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
 }
-.bottom{
-    background-color: hsl(223, 31%, 20%);
-    display: grid;
-    grid-template-columns: 60px 60px 60px 60px;
-    grid-template-rows: 40px 40px 40px 40px;
-    gap: 15px;
-    padding: 20px;
-    border-radius: 5px;
-    padding-bottom:30px;
-    position: absolute;
+
+button {
+  border-radius: 5px;
+  border: 0;
+  font-family: 'League Spartan', sans-serif;
+  color: hsl(225, 20%, 31%);
+  font-size: 25px;
+  cursor: pointer;
+  padding: 10px 0;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
 }
-button{
-    border-radius: 5px;
-    border: 0;
-    position: relative;
-    font-family: league spartan;
-    color:hsl(225, 20%, 31%);
-    font-size: 25px;
-    cursor: pointer;
+
+button:hover {
+  transform: translateY(-2px);
 }
-.reset{
-    height: 40px;
-    width: 135px;
-    background-color:hsl(225, 21%, 49%);
-    color: WHITE;
-    font-size: 16px;
+
+button:active {
+  transform: translateY(1px);
 }
-.reset:hover, .del:hover,.equal:hover{
-    opacity: 0.5;
+
+.reset {
+  grid-column: span 2;
+  background-color: hsl(225, 21%, 49%);
+  color: white;
+  font-size: 16px;
 }
-.equal{
-    height: 40px;
-    width: 135px;
-    display: flex;
-    justify-content: center ;
-    align-items: center;
-    margin-left: 75px;
-    background-color: hsl(6, 63%, 50%);
-    color: WHITE;
-    font-size: 16px;
+
+.equal {
+  grid-column: span 2;
+  background-color: hsl(6, 63%, 50%);
+  color: white;
+  font-size: 16px;
 }
-.del{
-    color: white;
-    background-color:hsl(225, 21%, 49%);
-    text-transform: uppercase;
-    font-size: 16px;
+
+.del {
+  color: white;
+  background-color: hsl(225, 21%, 49%);
+  text-transform: uppercase;
+  font-size: 16px;
 }
-body.active1{
-    background-color: hsl(0, 0%, 90%);
+
+.reset:hover, .del:hover, .equal:hover {
+  opacity: 0.8;
 }
-body.active1 button{
-    color: rgb(48, 46, 46);}
-.total.active1{
-    background-color: hsl(0, 0%, 93%);
-    color: rgb(48, 46, 46);;
+
+/* Theme 1 - Default */
+body.active1 {
+  background-color: hsl(0, 0%, 90%);
 }
-.bottom.active1{
-    background-color: hsl(0, 5%, 81%);
-    color: black;
+
+body.active1 button {
+  color: rgb(48, 46, 46);
 }
-.equal.active1{
-    background-color: hsl(25, 98%, 40%);
-    color: white;
+
+.total.active1 {
+  background-color: hsl(0, 0%, 93%);
+  color: rgb(48, 46, 46);
 }
-.reset.active1{
-    background-color: hsl(185, 42%, 37%);
-    color:white
+
+.bottom.active1 {
+  background-color: hsl(0, 5%, 81%);
+  color: black;
 }
-.del.active1{
-    background-color: hsl(185, 42%, 37%);
-    color: white;
+
+.equal.active1 {
+  background-color: hsl(25, 98%, 40%);
+  color: white;
 }
-.top.active1{
-    color: rgb(48, 46, 46);;
+
+.reset.active1, .del.active1 {
+  background-color: hsl(185, 42%, 37%);
+  color: white;
 }
-button.active1{
-    color: black;
+
+.top.active1 {
+  color: rgb(48, 46, 46);
 }
-body.active2{
-    background-color: hsl(268, 75%, 9%);
+
+/* Theme 2 */
+body.active2 {
+  background-color: hsl(268, 75%, 9%);
 }
-body.active2 button{
-color:hsl(52, 100%, 62%);
-background-color: hsl(268, 47%, 21%);
+
+body.active2 button {
+  color: hsl(52, 100%, 62%);
+  background-color: hsl(268, 47%, 21%);
 }
-.top.active2{
-    color:hsl(52, 100%, 62%);
+
+.top.active2 {
+  color: hsl(52, 100%, 62%);
 }
-.total.active2{
-    background-color: hsl(268, 71%, 12%);
-    color:hsl(52, 100%, 62%);
+
+.total.active2 {
+  background-color: hsl(268, 71%, 12%);
+  color: hsl(52, 100%, 62%);
 }
-.bottom.active2{
-    background-color: hsl(268, 71%, 12%);
+
+.bottom.active2 {
+  background-color: hsl(268, 71%, 12%);
 }
-.del.active2{
-    background-color: hsl(281, 89%, 26%);
-    color: white;
+
+.del.active2, .reset.active2 {
+  background-color: hsl(281, 89%, 26%);
+  color: white;
 }
-.reset.active2{
-    background-color: hsl(281, 89%, 26%);
-    color: white;
+
+.equal.active2 {
+  background-color: hsl(176, 100%, 44%);
+  color: black;
 }
-.equal.active2{
-    background-color: hsl(176, 100%, 44%);
-    color: black;
+
+/* Media Queries */
+@media screen and (max-width: 375px) {
+  .calculator {
+    max-width: 280px;
+  }
+  
+  button {
+    font-size: 20px;
+  }
+  
+  .bottom {
+    grid-gap: 10px;
+    padding: 15px;
+  }
+  
+  .total {
+    font-size: 28px;
+  }
 }
-@media screen and (max-width: 600px) {
-    .top{
-        margin-top: -40px;
-    }
-    .calc{
-        margin-left: 0px;
-    }
-    .theme{
-        margin-left: 280px;
-    }
-    .total{
-        width: 440px;  
-        margin-top: 10px; 
-    }
-    .bottom{ 
-        width:400px;
-        height: 330px;
-        grid-template-columns: 85px 85px 85px 85px;
-        grid-template-rows: 50px 50px 50px 50px;
-        gap: 20px;
-        padding: 20px;
-    }
-    button{
-        height: 50px;
+
+@media screen and (min-width: 376px) and (max-width: 600px) {
+  .calculator {
+    max-width: 325px;
+  }
 }
-.equal{
-    width: 192px;
-    margin-left: 105px;
-}
-.reset{
-    width: 200px;
-}
+
+@media screen and (min-width: 601px) {
+  .calculator {
+    max-width: 400px;
+  }
+  
+  .bottom {
+    grid-gap: 20px;
+  }
+  
+  button {
+    padding: 15px 0;
+  }
 }
