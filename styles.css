@@ -13,12 +13,15 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 20px;
+  padding: 15px;
+  margin: 0;
+  touch-action: manipulation;
 }
 
 .calculator {
   width: 100%;
   max-width: 325px;
+  margin: 0 auto;
 }
 
 .top {
@@ -215,26 +218,53 @@ body.active2 button {
 /* Media Queries */
 @media screen and (max-width: 375px) {
   .calculator {
-    max-width: 280px;
+    max-width: 100%;
+    width: 260px;
+    transform: scale(0.9);
+    transform-origin: center top;
   }
   
   button {
-    font-size: 20px;
+    font-size: 18px;
+    height: 40px;
   }
   
   .bottom {
-    grid-gap: 10px;
-    padding: 15px;
+    grid-gap: 8px;
+    padding: 12px;
   }
   
   .total {
-    font-size: 28px;
+    font-size: 24px;
+    height: 60px;
+  }
+  
+  .calc {
+    font-size: 24px;
+  }
+  
+  .theme, .one, .two, .three {
+    font-size: 10px;
+  }
+  
+  #box {
+    width: 50px;
   }
 }
 
 @media screen and (min-width: 376px) and (max-width: 600px) {
   .calculator {
-    max-width: 325px;
+    max-width: 100%;
+    width: 320px;
+  }
+  
+  button {
+    height: 45px;
+  }
+  
+  .bottom {
+    grid-gap: 12px;
+    padding: 15px;
   }
 }
 
@@ -249,5 +279,6 @@ body.active2 button {
   
   button {
     padding: 15px 0;
+    height: 50px;
   }
 }
